@@ -242,7 +242,7 @@ section {
 /* Homepage services — always 3 columns */
 .services-grid-3 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
   margin-top: 1rem;
 }
@@ -301,21 +301,40 @@ section {
   background-image: linear-gradient(rgba(20, 35, 56, 0.80), rgba(20, 35, 56, 0.80)), url('card-sprout.jpg');
 }
 
-/* Square cards; they grow taller only if the text needs the room */
+/* Square cards with text centered; they grow taller only if the text needs the room */
 .services-grid-3 .service-card {
   aspect-ratio: 1 / 1;
+  min-width: 0;
   overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  container-type: inline-size;
 }
 
-@media (max-width: 768px) {
+/* Text sizes scale with the card's width (cqi), so every square stays evenly filled */
+.services-grid-3 .service-card .card-body {
+  padding: 8cqi;
+}
+
+.services-grid-3 .service-card h3 {
+  font-size: 6.4cqi;
+}
+
+.services-grid-3 .service-card p {
+  font-size: 5.1cqi;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
   .services-grid-3 {
     grid-template-columns: 1fr;
   }
 
-  /* Keep single-column squares from getting huge on tablets */
+  /* Keep single-column squares phone-sized so they don't get huge on tablets */
   .services-grid-3 .service-card {
     width: 100%;
-    max-width: 420px;
+    max-width: 340px;
     margin: 0 auto;
   }
 }
