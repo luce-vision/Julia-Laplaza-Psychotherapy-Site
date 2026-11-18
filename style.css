@@ -322,6 +322,7 @@ section {
 }
 
 .services-grid-3 .service-card p {
+  text-align: center;
   font-size: 5.1cqi;
   line-height: 1.6;
 }
@@ -350,9 +351,13 @@ section {
   font-size: 0.97rem;
 }
 
-/* Homepage service card headings: underlined to match the site title */
+/* Card headings: centered and underlined to match the site title */
 .services-grid-3 .service-card h3 {
-  display: inline-block;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
   padding-bottom: 0.25em;
   border-bottom: 1.5px solid #a9cbe8;
 }
