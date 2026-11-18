@@ -269,7 +269,10 @@ section {
 /* Service card background photos, darkened so text stays readable */
 .service-card.card-individual,
 .service-card.card-couples,
-.service-card.card-consultation {
+.service-card.card-consultation,
+.service-card.card-first,
+.service-card.card-plan,
+.service-card.card-ongoing {
   background-size: cover;
   background-position: center;
 }
@@ -286,9 +289,16 @@ section {
   background-image: linear-gradient(rgba(20, 35, 56, 0.80), rgba(20, 35, 56, 0.80)), url('card-forest.jpg');
 }
 
-.service-card .icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.service-card.card-first {
+  background-image: linear-gradient(rgba(20, 35, 56, 0.80), rgba(20, 35, 56, 0.80)), url('card-sunrise.jpg');
+}
+
+.service-card.card-plan {
+  background-image: linear-gradient(rgba(20, 35, 56, 0.80), rgba(20, 35, 56, 0.80)), url('card-path.jpg');
+}
+
+.service-card.card-ongoing {
+  background-image: linear-gradient(rgba(20, 35, 56, 0.80), rgba(20, 35, 56, 0.80)), url('card-sprout.jpg');
 }
 
 @media (max-width: 768px) {
@@ -306,6 +316,13 @@ section {
 .service-card p {
   color: #d3dde8;
   font-size: 0.97rem;
+}
+
+/* Homepage service card headings: underlined to match the site title */
+.services-grid-3 .service-card h3 {
+  display: inline-block;
+  padding-bottom: 0.25em;
+  border-bottom: 1.5px solid #a9cbe8;
 }
 
 /* Why us */
