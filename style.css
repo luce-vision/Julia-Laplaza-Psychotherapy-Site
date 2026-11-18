@@ -168,8 +168,9 @@ nav.nav-home .logo-home {
 
 .btn {
   display: inline-block;
-  background: #3b82c4;
+  background: #1f4e79;
   color: #fff;
+  border: 1.5px solid #a9cbe8;
   padding: 0.85rem 2.2rem;
   border-radius: 4px;
   text-decoration: none;
@@ -179,7 +180,7 @@ nav.nav-home .logo-home {
 }
 
 .btn:hover {
-  background: #2b6cb0;
+  background: #2a5f91;
   transform: translateY(-1px);
 }
 
