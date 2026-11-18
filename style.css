@@ -248,6 +248,26 @@ section {
   padding: 1.5rem;
 }
 
+/* Service card background photos, darkened so text stays readable */
+.service-card.card-individual,
+.service-card.card-couples,
+.service-card.card-consultation {
+  background-size: cover;
+  background-position: center;
+}
+
+.service-card.card-individual {
+  background-image: linear-gradient(rgba(20, 35, 56, 0.80), rgba(20, 35, 56, 0.80)), url('card-leaf.jpg');
+}
+
+.service-card.card-couples {
+  background-image: linear-gradient(rgba(20, 35, 56, 0.80), rgba(20, 35, 56, 0.80)), url('card-lilies.jpg');
+}
+
+.service-card.card-consultation {
+  background-image: linear-gradient(rgba(20, 35, 56, 0.80), rgba(20, 35, 56, 0.80)), url('card-forest.jpg');
+}
+
 .service-card .icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
