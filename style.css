@@ -301,9 +301,22 @@ section {
   background-image: linear-gradient(rgba(20, 35, 56, 0.80), rgba(20, 35, 56, 0.80)), url('card-sprout.jpg');
 }
 
+/* Square cards; they grow taller only if the text needs the room */
+.services-grid-3 .service-card {
+  aspect-ratio: 1 / 1;
+  overflow: visible;
+}
+
 @media (max-width: 768px) {
   .services-grid-3 {
     grid-template-columns: 1fr;
+  }
+
+  /* Keep single-column squares from getting huge on tablets */
+  .services-grid-3 .service-card {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
   }
 }
 
